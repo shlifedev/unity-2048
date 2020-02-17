@@ -8,6 +8,7 @@
 # TODO 
  :heavy_check_mark: : Finished :small_orange_diamond: TODO
 
+ * Core Game Play :heavy_check_mark: 
  * Very Smooth Block Move Animation. :small_orange_diamond:
  * Combine Punch Animation :small_orange_diamond:
  * Node.cs, i can make your code short :heavy_check_mark:
