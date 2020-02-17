@@ -37,6 +37,10 @@ public class Board : MonoBehaviour
     public RectTransform emptyNodeRect;
     public RectTransform realNodeRect;
 
+    public void OnGameOver()
+    {
+        Debug.Log("Game Over!!!!");
+    }
     private void CreateBoard()
     {
         /* first initialize empty Node rect*/
@@ -253,13 +257,17 @@ public class Board : MonoBehaviour
     }
     private void CreateRandom()
     {
-        /* 나쁜 호출시도, 테스트용으로 콜하는거라 곧 바꿀예정. */
-        /* 모든 블럭 위치가 꽉 찬경우 아래 코드는 stackoverflow를 일으킬 수 있음.*/
-        Vector2Int v2i = new Vector2Int(UnityEngine.Random.Range(0, row), UnityEngine.Random.Range(0, col));
-        var recall = nodeMap[v2i].realNodeObj != null;
-        if(recall) 
-            CreateRandom();
-        CreateBlock(v2i.x, v2i.y);
+        var emptys = nodeData.FindAll(x => x.realNodeObj == null);
+        if (emptys.Count == 0)
+        {
+            // Run GameOver Check Logic
+        }
+        else
+        {
+            var rand = UnityEngine.Random.Range(0, emptys.Count);
+            var pt = emptys[rand].point;
+            CreateBlock(pt.x, pt.y);
+        }
     }
     private void Awake()
     {
