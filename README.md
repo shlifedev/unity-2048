@@ -1,9 +1,8 @@
 # 2048-Unity
+ The 2048 game source code written in Unity 2019.3
+ I implemented 2048 single play for 2048 online play.  
 ![gif](https://github.com/shlifedev/2048-Unity/blob/master/app.gif?raw=true)
 
- The 2048 game source code written in Unity 2019.3
- I implemented 2048 single play for 2048 online play. 
- 
 # How to Play
  - Open GameScene, And Playing with LeftArrow, RightArrow, UpArrow, DownArrow. 
  - There is no game win condition. You can make 4096, 8192
