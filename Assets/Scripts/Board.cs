@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Net.Mime; 
+using System.Net.Mime;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -101,6 +102,7 @@ public class Board : MonoBehaviour
         var node = nodeMap[new Vector2Int(x, y)];
         var pos = node.position; 
         realNodeObj.GetComponent<RectTransform>().localPosition = pos; 
+        realNodeObj.transform.DOPunchScale(new Vector3(.32f, .32f, .32f), 0.15f, 3);
         var nodeObj = realNodeObj.GetComponent<NodeObject>();
         this.realNodeList.Add(nodeObj);
         nodeObj.InitializeFirstValue();
@@ -137,6 +139,7 @@ public class Board : MonoBehaviour
             }
         }
     }
+ 
     /// <summary>
     /// Move Blocks by User Input.
     /// </summary>
