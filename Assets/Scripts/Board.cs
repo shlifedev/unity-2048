@@ -115,7 +115,8 @@ public class Board : MonoBehaviour
         from.value = null;
         if (from.realNodeObj != null)
         {
-            from.realNodeObj.CombineToNode(from, to);  
+            from.realNodeObj.CombineToNode(from, to);
+            from.realNodeObj = null;
             to.combined = true;
         }
     }
@@ -285,7 +286,7 @@ public class Board : MonoBehaviour
     }
     private void CreateRandom()
     {
-        var emptys = nodeData.FindAll(x => x.realNodeObj == null);
+        var emptys = nodeData.FindAll(x => x.realNodeObj == null); 
         if (emptys.Count == 0)
         {
             if (IsGameOver())
