@@ -12,7 +12,7 @@
  * **Node.cs** Can make code short :heavy_check_mark:  
  * Block Color :heavy_check_mark:
  * Very Smooth Block Move Animation. (**UpdateMoveAnimation()** to Tween) :small_orange_diamond:
- * Combine Punch Animation :small_orange_diamond:
+ * Combine Animation :heavy_check_mark:
  * Object Pooling :small_orange_diamond:
  * 2048 Game Heuristic AI :small_orange_diamond:
  * Support Mobile Swipe :small_orange_diamond:
