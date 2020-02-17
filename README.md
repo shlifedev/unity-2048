@@ -15,4 +15,4 @@
  * CreateRandom() Re-write. (Currently it can cause a stack overflow. Because written for simple test purposes. It's not hard work xD.) :heavy_check_mark:
  * Block Color :small_orange_diamond:
  * Object Pooling :small_orange_diamond:
- * 2048 Game AI 
+ * 2048 Game AI :small_orange_diamond:
