@@ -144,7 +144,7 @@ public class Board : MonoBehaviour
                     var node = nodeMap[new Vector2Int(i, j)];
                     if (node.value == null) 
                         continue; 
-                    var right = node.FindTargetRightNode(node);
+                    var right = node.FindTarget(node, Node.Direction.RIGHT);
                     if (right != null)
                     {
                         if (node.value.HasValue && right.value.HasValue)
@@ -176,7 +176,7 @@ public class Board : MonoBehaviour
                     if (node.value == null) 
                         continue; 
 
-                    var left = node.FindTargetLeftNode(node);
+                    var left = node.FindTarget(node, Node.Direction.LEFT);
                     if (left != null)
                     {
                         if (node.value.HasValue && left.value.HasValue)
@@ -205,7 +205,7 @@ public class Board : MonoBehaviour
                     var node = nodeMap[new Vector2Int(i, j)];
                     if (node.value == null) 
                         continue;  
-                    var up = node.FindTargetUpNode(node);
+                    var up = node.FindTarget(node, Node.Direction.UP);
                     if (up != null)
                     {
                         if (node.value.HasValue && up.value.HasValue)
@@ -232,7 +232,7 @@ public class Board : MonoBehaviour
                     var node = nodeMap[new Vector2Int(i, j)];
                     if (node.value == null) 
                         continue;  
-                    var down = node.FindTargetDownNode(node);
+                    var down = node.FindTarget(node, Node.Direction.DOWN);
                     if (down != null)
                     {
                         if (node.value.HasValue && down.value.HasValue)
