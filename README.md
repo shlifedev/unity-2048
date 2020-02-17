@@ -17,8 +17,8 @@
  * Combine Punch Animation :small_orange_diamond:
  * Object Pooling :small_orange_diamond:
  * 2048 Game Heuristic AI :small_orange_diamond:
- * Support Mobile Swipe 
-
+ * Support Mobile Swipe :small_orange_diamond:
+ * Support Multiple Grid (4x4, 6x6, 8x8)
  # ScreenShot
 
 ![gif](https://github.com/shlifedev/2048-Unity/blob/master/app.gif?raw=true)
