@@ -7,7 +7,7 @@
 
 
 # TODO 
- :heavy_check_mark: : Finished :small_orange_diamond: Working Now
+ :heavy_check_mark: : Finished :small_orange_diamond: TODO
 
  * Very Smooth Block Move Animation. :small_orange_diamond:
  * Combine Punch Animation :small_orange_diamond:
@@ -15,6 +15,7 @@
  * CreateRandom() Re-write. (Currently it can cause a stack overflow. Because written for simple test purposes. It's not hard work xD.) :heavy_check_mark:
  * Block Color :small_orange_diamond:
  * Object Pooling :small_orange_diamond:
+ * GameOverCondition :small_orange_diamond:
  * 2048 Game AI :small_orange_diamond:
  
  # ScreenShot
