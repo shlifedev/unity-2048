@@ -1,4 +1,6 @@
 # 2048-Unity
+![gif](https://github.com/shlifedev/2048-Unity/blob/master/app.gif?raw=true)
+
  The 2048 game source code written in Unity 2019.3
  I implemented 2048 single play for 2048 online play. 
  
@@ -16,9 +18,6 @@
  * Object Pooling :small_orange_diamond:
  * 2048 Game Heuristic AI :small_orange_diamond:
  * Support Mobile Swipe :small_orange_diamond:
- * Support Multiple Grid (4x4, 6x6, 8x8) :small_orange_diamond:
- 
- # ScreenShot
-![gif](https://github.com/shlifedev/2048-Unity/blob/master/app.gif?raw=true)
+ * Support Multiple Grid (4x4, 6x6, 8x8) :small_orange_diamond: 
 
 
