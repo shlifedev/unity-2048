@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db55ea86c83a8b24b8726fa3e67147ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target:
-    point: {x: 0, y: 0}
-    position: {x: 0, y: 0}
+  combine: 0
+  blockImage: {fileID: 490343179275367107}
   valueText: {fileID: 597214141}
+  needDestroy: 0

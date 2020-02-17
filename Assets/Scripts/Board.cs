@@ -39,7 +39,7 @@ public class Board : MonoBehaviour
 
     public void OnGameOver()
     {
-        Debug.Log("Game Over!!!!");
+       Debug.Log("Game Over!!!!");
     }
     private void CreateBoard()
     {
@@ -110,7 +110,7 @@ public class Board : MonoBehaviour
  
     public void Combine(Node from, Node to)
     {
-        Debug.Log($"TRY COMBINE {from.point} , {to.point}");
+     //   Debug.Log($"TRY COMBINE {from.point} , {to.point}");
         to.value = to.value * 2;
         from.value = null;
         if (from.realNodeObj != null)
@@ -123,7 +123,7 @@ public class Board : MonoBehaviour
 
     public void Move(Node from, Node to)
     {
-        Debug.Log($"TRY MOVE {from.point} , {to.point}");
+//        Debug.Log($"TRY MOVE {from.point} , {to.point}");
         to.value = from.value;
         from.value = null;  
         if (from.realNodeObj != null)
@@ -137,7 +137,10 @@ public class Board : MonoBehaviour
             }
         }
     }
-    
+    /// <summary>
+    /// Move Blocks by User Input.
+    /// </summary>
+    /// <param name="dir"></param>
     public void MoveTo(Node.Direction dir)
     {
         if (dir == Node.Direction.RIGHT)
@@ -168,8 +171,7 @@ public class Board : MonoBehaviour
                     } 
                 }
             }
-
-            Show();
+ 
         }
         if (dir == Node.Direction.LEFT)
         { 
@@ -198,8 +200,7 @@ public class Board : MonoBehaviour
                     } 
                 }
             }
-
-            Show();
+ 
         }
         if (dir == Node.Direction.UP)
         {
@@ -256,12 +257,26 @@ public class Board : MonoBehaviour
             }
         }
         
+        foreach (var data in realNodeList)
+        {
+            if (data.target != null)
+            {
+                state = State.PROCESSING; 
+                data.StartMoveAnimation(); 
+            }
+        }
+        
+        Show();
         if (IsGameOver())
         {
            OnGameOver();
         }
     }
 
+    /// <summary>
+    /// if can't combine anymore then game over!!!!
+    /// </summary>
+    /// <returns></returns>
     public bool IsGameOver()
     {
         bool gameOver = true;
@@ -306,16 +321,15 @@ public class Board : MonoBehaviour
         CreateBoard();  
     }
 
-    public void UpdateBlockAni()
+    public void UpdateState()
     {
         bool targetAllNull = true;
         foreach (var data in realNodeList)
         {
             if (data.target != null)
-            {
-                state = State.PROCESSING;
+            { 
                 targetAllNull = false;
-                data.UpdateMoveAnimation();
+                break;
             }
         }
 
@@ -341,7 +355,7 @@ public class Board : MonoBehaviour
         if (state == State.END)
         {
             nodeData.ForEach(x => x.combined = false);
-            Debug.Log("init nodes, try move!");
+//            Debug.Log("init nodes, try move!");
             state = State.WAIT;
             CreateRandom();
         }
@@ -350,7 +364,7 @@ public class Board : MonoBehaviour
     private void Show()
     {
         string v = null;
-        for (int i = 0; i < col; i++)
+        for (int i = col-1; i >= 0; i--)
         {
             for (int j = 0; j < row; j++)
             {
@@ -365,13 +379,12 @@ public class Board : MonoBehaviour
                 v += t + " ";
             } 
             v += "\n";
-        }
-
+        } 
         Debug.Log(v);
     }
     private void Update()
     {
-        UpdateBlockAni();
+        UpdateState();
         if (state == State.WAIT)
         {
             if (Input.GetKeyUp(KeyCode.RightArrow)) MoveTo(Node.Direction.RIGHT);
