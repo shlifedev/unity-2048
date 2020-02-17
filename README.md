@@ -16,3 +16,7 @@
  * Block Color :small_orange_diamond:
  * Object Pooling :small_orange_diamond:
  * 2048 Game AI :small_orange_diamond:
+ 
+ # ScreenShot
+
+![gif](https://github.com/shlifedev/2048-Unity/blob/master/app.gif?raw=true)
