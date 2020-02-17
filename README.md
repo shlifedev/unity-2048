@@ -1,11 +1,10 @@
 # 2048-Unity
  The 2048 game source code written in Unity 2019.3
-
-# How to Play
- - Open GameScene, And Playing with LeftArrow, RightArrow, UpArrow, DownArrow.
+ I implemented 2048 single play for 2048 online play. 
  
-
-
+# How to Play
+ - Open GameScene, And Playing with LeftArrow, RightArrow, UpArrow, DownArrow. 
+ 
 # TODO 
  :heavy_check_mark: : Finished :small_orange_diamond: TODO
 
