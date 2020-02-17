@@ -254,13 +254,44 @@ public class Board : MonoBehaviour
                 }
             }
         }
+        
+        if (IsGameOver())
+        {
+           OnGameOver();
+        }
+    }
+
+    public bool IsGameOver()
+    {
+        bool gameOver = true;
+        nodeData.ForEach(x =>
+        { 
+            for (int i = 0; i < x.linkedNode.Length; i++)
+            {
+                if (x.realNodeObj == null) gameOver = false;
+                if (x.linkedNode[i] == null)
+                    continue;
+                
+                var nearNode = nodeMap[x.linkedNode[i].Value];
+                if(x.value != null && nearNode.value != null)
+                if (x.value == nearNode.value)
+                {
+                    gameOver = false;
+                }
+            } 
+        });
+
+        return gameOver;
     }
     private void CreateRandom()
     {
         var emptys = nodeData.FindAll(x => x.realNodeObj == null);
         if (emptys.Count == 0)
         {
-            // Run GameOver Check Logic
+            if (IsGameOver())
+            {
+                OnGameOver();;
+            }
         }
         else
         {
