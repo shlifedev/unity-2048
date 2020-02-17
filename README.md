@@ -17,7 +17,7 @@
  * Combine Punch Animation :small_orange_diamond:
  * Object Pooling :small_orange_diamond:
  * 2048 Game Heuristic AI :small_orange_diamond:
- 
+ * Support Mobile Swipe 
 
  # ScreenShot
 
