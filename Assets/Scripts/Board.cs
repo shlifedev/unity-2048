@@ -40,7 +40,7 @@ public class Board : MonoBehaviour
 
     public void OnGameOver()
     {
-       Debug.Log("Game Over!!!!");
+       Debug.Log("Game Over!!!!!");
     }
     private void CreateBoard()
     {
